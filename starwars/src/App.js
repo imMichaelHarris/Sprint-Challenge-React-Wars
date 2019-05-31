@@ -3,15 +3,12 @@ import "./App.css";
 import CharacterList from "./components/CharacterList";
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      starwarsChars: [],
-      nextPage: null,
-      previousPage: null
-    };
-  }
-
+  state = {
+    starwarsChars: [],
+    nextPage: null,
+    previousPage: null
+  };
+  
   componentDidMount() {
     this.getCharacters("https://swapi.co/api/people/");
   }
