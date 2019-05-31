@@ -1,7 +1,9 @@
 import React from 'react'
 
 const Character = (props) => {
-    return <p>Blah</p>
+    return (
+        <p>{props.character.name}</p>
+    )
 }
 
 export default Character;
