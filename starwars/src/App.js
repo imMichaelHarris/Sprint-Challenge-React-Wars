@@ -6,7 +6,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
     };
   }
 
@@ -23,12 +23,24 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+        console.log(data);
+        this.setState({ 
+          starwarsChars: data.results,
+          nextPage: data.next,
+          previousPage: data.previous
+         });
       })
       .catch(err => {
         throw new Error(err);
       });
   };
+
+  // getNextCharacters = URL => {
+  //   fetch(URL)
+  //     .then(res => {
+  //       return res.json();
+  //     })
+  // }
 
   render() {
     return (
