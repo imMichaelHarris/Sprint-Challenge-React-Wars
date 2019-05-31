@@ -8,7 +8,7 @@ class App extends Component {
     nextPage: null,
     previousPage: null
   };
-  
+
   componentDidMount() {
     this.getCharacters("https://swapi.co/api/people/");
   }
