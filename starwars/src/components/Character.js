@@ -1,5 +1,6 @@
 import React from "react";
 import "./StarWars.css";
+import Film from "./Film";
 
 const Character = props => {
   return (
@@ -15,6 +16,11 @@ const Character = props => {
           Hair Color: {props.character.hair_color} - Eye-Color:{" "}
           {props.character.eye_color}
         </p>
+        <div>
+            {props.character.films.map(film => {
+                return <Film film={film} key={film} />
+            })}
+        </div>
       </div>
     </div>
   );

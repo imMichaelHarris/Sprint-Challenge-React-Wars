@@ -30,6 +30,8 @@ class App extends Component {
           nextPage: data.next,
           previousPage: data.previous
         });
+      }).then(data => {
+        console.log(this.state)
       })
       .catch(err => {
         throw new Error(err);
