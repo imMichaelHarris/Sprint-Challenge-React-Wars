@@ -7,6 +7,7 @@ const CharacterList = (props) => {
             {props.characters.map((character, i )=> {
                 return <Character character={character} key={i}/>
             })}
+
         </div>
     )
 }

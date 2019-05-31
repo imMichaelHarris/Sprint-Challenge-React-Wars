@@ -19,3 +19,15 @@ body {
   margin: auto;
   justify-content: center;
 }
+button {
+  padding: .5rem;
+  background: lightseagreen;
+  border-style: none;
+  border-radius: 5px;
+  margin: 20px;
+  transition: .3s ease-in-out;
+}
+button:hover {
+  background: #eee;
+  cursor: pointer;
+}
