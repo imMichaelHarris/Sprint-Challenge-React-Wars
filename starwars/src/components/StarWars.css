@@ -1,8 +1,21 @@
 .character {
   background: #fff;
   padding: 0.8rem;
-  margin: 0.8rem;
-  width: 30%;
+  margin: 0.5rem;
+  width: calc(100% / 4);
   border-radius: 10px;
   box-shadow: 0 0.5rem 0.5rem lightcoral;
+}
+.appeared {
+  margin-top: 1.25rem;
+}
+.appeared h3{
+  text-decoration: underline;
+  font-size: 1.4rem;
+}
+.film {
+  color: firebrick;
+}
+p {
+  font-size: .8rem;
 }

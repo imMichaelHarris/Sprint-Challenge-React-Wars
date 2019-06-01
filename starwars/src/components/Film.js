@@ -19,7 +19,7 @@ class Film extends React.Component {
       });
   }
   render() {
-    return <h4>{this.state.film.title}</h4>; //Needs to fetch this data...
+    return <h4 className="film">{this.state.film.title}</h4>; //Needs to fetch this data...
   }
 }
 
