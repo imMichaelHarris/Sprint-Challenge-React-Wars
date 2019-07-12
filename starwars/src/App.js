@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import CharacterList from "./components/CharacterList";
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      starwarsChars: []
-    };
-  }
+  state = {
+    starwarsChars: [],
+    nextPage: null,
+    previousPage: null
+  };
 
   componentDidMount() {
-    this.getCharacters('https://swapi.co/api/people/');
+    this.getCharacters("https://swapi.co/api/people/");
   }
 
   getCharacters = URL => {
@@ -22,7 +22,11 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+        this.setState({
+          starwarsChars: data.results,
+          nextPage: data.next,
+          previousPage: data.previous
+        });
       })
       .catch(err => {
         throw new Error(err);
@@ -33,6 +37,19 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <CharacterList characters={this.state.starwarsChars} />
+        <button
+          className={`${this.state.previousPage ? "" : "disabled"}`}
+          onClick={() => this.getCharacters(this.state.previousPage)}
+        >
+          Previous Page
+        </button>
+        <button
+          className={`${this.state.nextPage ? "" : "disabled"}`}
+          onClick={() => this.getCharacters(this.state.nextPage)}
+        >
+          Next Page
+        </button>
       </div>
     );
   }

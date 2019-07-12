@@ -24,19 +24,23 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+- [X] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+    React JS is a javascript library that makes it easier to build web applications with changing data. It's smart enough to know when our data has changed and will only render that part of the application again instead of re rendering the whole page which has performance drawbacks. In class we learned that we can modularize our componments.
 
-- [ ] What does it mean to _think_ in react?
+- [X] What does it mean to _think_ in react?
+    To think in React means to take a high level look at the application you are trying to build and thinking about the data flow and the seperate pieces of the app that you can split into different components.
 
-- [ ] Describe state.
+- [X] Describe state.
+    State is the current state of the react component. It is managed and can only be used on a class component. State can be changed using the 'setState' method. When the components state changes it re renders the component to reflect the new state.
 
-- [ ] Describe props.
+- [X] Describe props.
+    Props are a powerfull tool that lets us pass data and methods from a parent component to a child component. We pass props by setting a key variable on the parent component with the value set to whatever we want to give the child component access to. Props cannot be passed from child to parent directly. Both class and functional componets in React can utilize props.
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
+- [X] Create a forked copy of this project.
 - [ ] Add PM as collaborator on Github.
 - [ ] Clone your OWN version of Repo (Not Lambda's by mistake!)
 - [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.

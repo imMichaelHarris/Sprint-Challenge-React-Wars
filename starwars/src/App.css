@@ -6,3 +6,31 @@
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+}
+button {
+  padding: 0.5rem;
+  background: lightseagreen;
+  border-style: none;
+  border-radius: 5px;
+  margin: 20px;
+  transition: 0.3s ease-in-out;
+}
+button:hover {
+  background: #eee;
+  cursor: pointer;
+}
+.disabled {
+  display: none;
+}
